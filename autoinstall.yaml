@@ -1,0 +1,33 @@
+#cloud-config
+autoinstall:
+    version: 1
+    identity:
+        realname: 'Lorenzo Sprenger'
+        hostname: ubuntu-desktop
+        username: Sprenger
+        password: '$6$mNvCUws8vOtRUVoB$NxfZcZwEoJ4uG8FfaUixFcOUYkBPY44IIvtb.3.oa1MHUROFq7fYkFU6NmLz/5faLj9k6wwevxNO55K45puBm1'
+    locale: pt_BR.utf8
+    keyboard:
+        layout: br
+    timezone: "America/Sao_Paulo"   
+    packages:
+        - libreoffice
+        - gimp
+        - git
+        - wget
+        - python3
+        - python3-pip
+        - nodejs
+        - npm
+
+    snaps:
+        - name: spotify
+          channel: stable
+          classic: false
+    codecs:
+        install: true
+    drivers:
+        install: true
+    updates: all
+    shutdown: reboot
+
